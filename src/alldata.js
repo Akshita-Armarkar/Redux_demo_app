@@ -13,7 +13,7 @@ const Allstoredata = () => {
             return (
               <p key={index}>
                 {" "}
-                {index} . {name}{" "}
+                {index + 1} . {name}{" "}
               </p>
             );
           })}
@@ -35,7 +35,7 @@ const Allstoredata = () => {
               {allitem.map((info, index) => {
                 return (
                   <tr key={index}>
-                    <td> {index} </td>
+                    <td> {index + 1} </td>
                     <td> {info.name} </td>
                     <td> {info.price} </td>
                     <td> {info.qty} </td>
@@ -45,9 +45,7 @@ const Allstoredata = () => {
             </tbody>
           </table>
           <div className="row">
-            <h4 className="text-center">
-              Total comments from store {Apidata.length}
-            </h4>
+            <h4 className="text-center">Data from store {Apidata.length}</h4>
             {Apidata.map((data, index) => {
               return (
                 <div className="col-lg-12" key={index}>
